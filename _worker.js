@@ -1,5 +1,5 @@
 import{connect as C}from'cloudflare:sockets'
-const U=new Uint8Array([207,164,66,231,10,98,92,23,153,27,78,44,147,137,198,95]),M=new Uint8Array(32768),P=Array(12),TD=new TextDecoder,
+const U=new Uint8Array([219, 22, 6, 6, 122, 179, 72, 38, 167, 252, 5, 225, 140, 174, 171, 233]),M=new Uint8Array(32768),P=Array(12),TD=new TextDecoder,
 A=s=>{const o=19+s[17],p=s[o]<<8|s[o+1],b=o+3,y=s[o+2]===1,n=s[b];return[y?`${s[b]}.${s[b+1]}.${s[b+2]}.${s[b+3]}`:TD.decode(s.subarray(b+1,b+1+n)),p,y?b+4:b+1+n,s[0]]},
 B=(h,p)=>{try{const s=C({hostname:h,port:p});return s.opened.then(()=>s).catch(()=>null)}catch{return null}};
 let m=0,l=0
